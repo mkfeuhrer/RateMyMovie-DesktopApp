@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>RateMyMovie</title>
+    <link rel="stylesheet" href="styles/app.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  </head>
+  <body>
+    <!-- All of the Node.js APIs are available in this renderer process. -->
+    <h1>Welcome to RateMyMovie </h1>
+
+     <section class="row">
+      <div class="small-12 columns">
+        <form id="film">
+          <fieldset>
+            <legend>Search for Movies/TV-Series</legend>
+            <label for="title">Title</label>
+
+            <div class="input-group">
+              <input class="input-group-field" type="text" id="title" placeholder="Movie/TV-Series Title" />
+            </div>
+            <div class="input-group-button">
+              <button name="submit" type="button" class="button" id="submitbutton">Search</button>
+              <button name="reset" type="button" class="button button-clear" id="resetbutton">Clear</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+
+      <div class="row container" id="result">
+        <div class="small-12 medium-8 columns">
+          <h2 id="result--title"></h2>
+          <p id="result--year"></p>
+          <p id="result--rated"></p>
+          <p id="result--release"></p>
+          <p id="result--runtime"></p>
+          <p id="result--genres"></p>
+          <p id="result--director"></p>
+          <p id="result--writer"></p>
+          <p id="result--actors"></p>
+          <p id="result--plot"></p>
+          <p id="result--languages"></p>
+          <p id="result--country"></p>
+          <p id="result--awards"></p>
+          <p id="result--rating"></p>
+          <p id="result--votes"></p>
+          <p id="result--type"></p>
+          <p id="result--imdburl"></p>
+        </div>
+        <div class="small-12 medium-4 columns">
+          <img id="result--poster" src="" />
+        </div>
+      </div>
+
+     <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <script src="./renderer.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "RateMyMovie",
+  "version": "1.0.0",
+  "description": "Simple Desktop Application providing rating of Movies and Tv Series",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "Mohit Khare",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "~1.7.8"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "imdb-api": "^3.1.2"
+  }
+}
