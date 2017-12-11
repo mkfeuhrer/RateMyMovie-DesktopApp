@@ -4,20 +4,53 @@
   "description": "Simple Desktop Application providing rating of Movies and Tv Series",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "build --dir",
+    "dist": "build"
   },
   "repository": "",
   "keywords": [
     "Electron",
-    "quick",
-    "start",
-    "tutorial",
+    "RateMyMovie",
+    "Movies/Tv-Series",
+    "Search",
     "demo"
   ],
   "author": "Mohit Khare",
   "license": "MIT",
   "devDependencies": {
-    "electron": "~1.7.8"
+    "electron": "^1.7.9",
+    "electron-builder": "^19.48.3",
+    "electron-packager": "^10.1.0"
+  },
+  "build": {
+    "appId": "com.mohit.RateMyMovie",
+    "copyright": "Copyright © 2018 ${Mohit Khare}",
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "title": "RateMyMovie",
+      "target": "NSIS",
+      "icon": "build/icon.ico"
+    }
   },
   "dependencies": {
     "axios": "^0.17.1",

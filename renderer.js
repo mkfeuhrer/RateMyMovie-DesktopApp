@@ -48,7 +48,8 @@ function displayResult(res)
   document.getElementById("result--type").innerText = ifExists(res.type);
   document.getElementById("result--imdburl").innerText = ifExists(res.imdburl);
   document.getElementById("result--poster").src = ifExists(res.poster);
-
+  var tog = "toggle";
+  toggle_visibility(tog);
 }
 
 function showErrorMessage(res)
@@ -59,4 +60,8 @@ function showErrorMessage(res)
 function ifExists(obj)
 {
   return (obj !== "N/A" ? obj : "");
+}
+
+function toggle_visibility(className) {
+    $('.' + className).toggle();
 }

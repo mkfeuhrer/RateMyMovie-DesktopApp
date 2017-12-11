@@ -1,62 +1,144 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
-  <head>
+	<head>
     <meta charset="UTF-8">
     <title>RateMyMovie</title>
     <link rel="stylesheet" href="styles/app.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-  </head>
-  <body>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    <h1>Welcome to RateMyMovie </h1>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
 
-     <section class="row">
-      <div class="small-12 columns">
-        <form id="film">
-          <fieldset>
-            <legend>Search for Movies/TV-Series</legend>
-            <label for="title">Title</label>
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">Welcome</a></li>
+							<li><a href="#one">Search</a></li>
+							<li><a href="#three">Get in touch</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
 
-            <div class="input-group">
-              <input class="input-group-field" type="text" id="title" placeholder="Movie/TV-Series Title" />
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>Rate My Movie</h1>
+							<p>Check out movie/tv-serires ratings,plot and much more...</p>
+							<ul class="actions">
+								<li><a href="#one" class="button scrolly">Let's begin</a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- One -->
+					<section id="one" class="wrapper style2 spotlights">
+						<section>
+							<div class="content">
+								<div class="inner">
+									<h2>  Search Movies/TV-Series</h2>
+
+                   <div class="columns">
+                     <form id="film">
+                       <fieldset>
+                         <div class="input-group">
+                           <input class="input-group-field" type="text" id="title" placeholder="Enter Movie/TV-Series title" />
+                         </div>
+                         <div class="input-group-button actions submit">
+                           <button name="submit" type="button" class="button" id="submitbutton">Search</button>
+                         </div>
+                       </fieldset>
+                     </form>
+                   </div>
+                   <hr>
+							</div>
             </div>
-            <div class="input-group-button">
-              <button name="submit" type="button" class="button" id="submitbutton">Search</button>
-              <button name="reset" type="button" class="button button-clear" id="resetbutton">Clear</button>
-            </div>
-          </fieldset>
-        </form>
-      </div>
+						</section>
+          </section>
 
-      <div class="row container" id="result">
-        <div class="small-12 medium-8 columns">
-          <h2 id="result--title"></h2>
-          <p id="result--year"></p>
-          <p id="result--rated"></p>
-          <p id="result--release"></p>
-          <p id="result--runtime"></p>
-          <p id="result--genres"></p>
-          <p id="result--director"></p>
-          <p id="result--writer"></p>
-          <p id="result--actors"></p>
-          <p id="result--plot"></p>
-          <p id="result--languages"></p>
-          <p id="result--country"></p>
-          <p id="result--awards"></p>
-          <p id="result--rating"></p>
-          <p id="result--votes"></p>
-          <p id="result--type"></p>
-          <p id="result--imdburl"></p>
-        </div>
-        <div class="small-12 medium-4 columns">
-          <img id="result--poster" src="" />
-        </div>
-      </div>
+          <!-- Two -->
+  					<section id="two" class="wrapper style3 fade-up toggle">
+  						<div class="inner ">
+  							<h2 style="align:center;">Search Results :</h2>
+                <div class="row container" id="result">
 
-     <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-    <script src="./renderer.js"></script>
+                  <div class="small-12 medium-4 columns">
+                    <img id="result--poster" src="" />
+                  </div>
+                  <div id = "info" class="small-12 medium-4 columns">
+                    <div class="row"><label>Movie :</label><span id="result--title"></span></div>
+                    <div class="row"><label>Year :</label><span id="result--year"></span></div>
+                    <div class="row"><label>Rated :</label><span id="result--rated"></span></div>
+                    <div class="row"><label>Release Date :</label><span id="result--release"></span></div>
+                    <div class="row"><label>Running Time :</label><span id="result--runtime"></span></div>
+                    <div class="row"><label>Genres :</label><span id="result--genres"></span></div>
+                    <div class="row"><label>director :</label><span id="result--director"></span></div>
+                    <div class="row"><label>Writers :</label><span id="result--writer"></span></div>
+                    <div class="row"><label>Actors :</label><span id="result--actors"></span></div>
+                    <div class="row"><label>Plot :</label><span id="result--plot"></span></div>
+                    <div class="row"><label>Languages :</label><span id="result--languages"></span></div>
+                    <div class="row"><label>Country :</label><span id="result--country"></span></div>
+                    <div class="row"><label>Awards :</label><span id="result--awards"></span></div>
+                    <div class="row"><label>Rating :</label><span id="result--rating"></span></div>
+                    <div class="row"><label>Votes :</label><span id="result--votes"></span></div>
+                    <div class="row"><label>Type :</label><span id="result--type"></span></div>
+                    <div class="row"><label>URL :</label><span id="result--imdburl"></span></div>
+                </div>
 
-  </body>
+  							<ul class="actions">
+  								<li><a href="https://www.mymovierack.com" class="button">Learn more</a></li>
+  							</ul>
+  						</div>
+  					</section>
+
+				<!-- Three -->
+					<section id="three" class="wrapper style1 fade-up">
+						<div class="inner">
+							<h2>Get in touch</h2>
+							<p>Want to suggest features , report bugs , or contribute? Feel free to contact!! </p>
+							<div class="split style1">
+								<section>
+									<ul class="contact">
+										<li>
+											<h3>Email</h3>
+											<a href="https://mail.google.com/mail/?view=cm&fs=1&to=mohitfeuhrer@gmail.com">mohitfeuhrer@gmail.com</a>
+										</li>
+										<li>
+											<h3>Social</h3>
+											<ul class="icons">
+												<li><a href="https://www.facebook.com/mkfeuhrer" class="fa-facebook"><span class="label">Facebook</span></a></li>
+												<li><a href="https://www.github.com/mkfeuhrer" class="fa-github"><span class="label">GitHub</span></a></li>
+												<li><a href="https://www.linkedin.com/in/mohitkhare1996/" class="fa-linkedin"><span class="label">LinkedIn</span></a></li>
+											</ul>
+										</li>
+									</ul>
+								</section>
+							</div>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+      <script src="./renderer.js"></script>
+      <script>window.$ = window.jQuery = require('./assets/js/jquery.min.js');</script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
 </html>
